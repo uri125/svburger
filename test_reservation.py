@@ -5,16 +5,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 import time
 import pytest
-import random
-import string
-
-
-def random_char(char_num):
-    return ''.join(random.choice(string.ascii_letters) for _ in range(char_num))
-
-
-def random_email():
-    return random_char(7) + "uri@gmail.com"
 
 
 @pytest.fixture()

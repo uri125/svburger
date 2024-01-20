@@ -2,18 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
+from test_e2e import random_email
 import time
 import pytest
-import random
-import string
-
-
-def random_char(char_num):
-    return ''.join(random.choice(string.ascii_letters) for _ in range(char_num))
-
-
-def random_email():
-    return random_char(7) + "uri@gmail.com"
 
 
 @pytest.fixture()
